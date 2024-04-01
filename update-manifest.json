@@ -1,0 +1,74 @@
+{
+    "version": "1.0.0",
+    "updateTime": "2024-04-01T12:00:00Z",
+    "files": [
+      {
+        "type": "js",
+        "path": "extension-updates/index.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/init.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/workerD.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/workerR.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/Daily.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/StakeUS.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/Bonus.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/Bonus1.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/Bonusnew.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/pagerldr.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/Reload.js",
+        "version": "1.0.0"
+      },
+      {
+        "type": "js",
+        "path": "extension-updates/manifest.js", // Assuming manifest.js is a script
+        "version": "1.0.0"
+      },
+      // Include HTML files if any, example:
+      {
+        "type": "html",
+        "path": "extension-updates/popup.html", // Replace with actual HTML file names
+        "version": "1.0.0"
+      }
+      // Add more entries for any additional JS and HTML files
+    ]
+  }
+  

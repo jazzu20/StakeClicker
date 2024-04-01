@@ -1,7 +1,7 @@
 {
-  "name": "jazzu clicer",
+  "name": "jazzu clicker",
   "manifest_version": 3,
-  "version": "1",
+  "version": "1.1",
   "description": "taena this is it!",
   "icons": {
     "16":  "resources/icon_016.png",
@@ -66,5 +66,6 @@
     }
     
     
-  ]
+  ],
+  "update_url": "https://github.com/jazzu20/StakeClicker/releases/latest/download/update-manifest.json",
 }
