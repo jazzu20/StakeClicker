@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stake Code Claimer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div id="content">
+        <fieldset>
+            <legend>Bonus Code Server Login</legend>
+            <div class="content-container">
+                <div class="content1">
+                        <div>
+                            <button id="connectButton">Connect</button>
+                            <button id="disconnectButton" class="hidden">Disconnect</button>
+                            <span class="label-text">- Status:</span>
+                            <span id="connectionStatus">Disconnected</span>
+                        </div>
+                        <div>
+                            <label for="autoReconnect">Automatic Reconnect:</label>
+                            <input type="checkbox" id="autoReconnect">
+                        </div>
+                        <div>
+                            <label for="stakeSelector">Stake Domain:</label>
+                            <select id="stakeSelector">
+                                <option value="stake.us">Stake.us</option>
+                            </select>
+                            <span class="dash"> - </span>
+                            <label for="cryptoSelector">Crypto Type:</label>
+                            <select id="cryptoSelector">
+                                <option value="sweeps">SWEEPS (US)</option>
+                                <option value="gold">GOLD (US)</option>
+                            </select>
+                        </div>
+                        <div>
+                        <label for="reloadSelector">Claim Reload:</label>
+                        <input type="checkbox" id="reload">
+                        <span id="countdownTimer"></span>
+                        </div>
+                        <div>
+                        <label for="dailySelector">Claim Daily:</label>
+                        <input type="checkbox" id="daily">
+                        <span id="DcountdownTimer"></span>
+                        </div>
+                        <div id="messages" style="margin-left: 10px;"></div>
+                        <div id="viewMessage" class="viewMessage hidden"></div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <script src="lib/jquery.slim.min.js"></script>
+    <script src="lib/json-format-highlight.js"></script>
+    <script src="index.js"></script>
+    <script src="init.js"></script>
+</body>
+
+</html>

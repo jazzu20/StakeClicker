@@ -1,0 +1,70 @@
+{
+  "name": "jazzu clicer",
+  "manifest_version": 3,
+  "version": "1",
+  "description": "taena this is it!",
+  "icons": {
+    "16":  "resources/icon_016.png",
+    "32":  "resources/icon_032.png",
+    "48":  "resources/icon_048.png",
+    "128": "resources/icon_128.png"
+  },
+  
+  "action": {
+    "default_icon": "resources/icon_032.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "scripting",
+    "alarms",
+    "storage",
+    "activeTab"
+  ],
+  "options_page": "index.html",
+  "background":{
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "https://stake.us/?bonus=*",
+        "https://stake.us/?promo=*"
+      ],
+      "js": ["Bonus.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://stake.us/?tab=reload&modal=vip*"
+      ],
+      "js": ["Reload.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://stake.us/settings/offers?type=drop&code=*",
+        "https://stake.us/?bonus=*"
+        
+      ],
+      "js": ["Bonus1.js"]
+    },
+    {
+      "matches": [
+        "https://stake.us/settings/offers?app=Bonus*"
+      ],
+      "js": ["Bonusnew.js", "pagerldr.js"]
+    },
+    {
+      "matches": [
+        "https://stake.us/?tab=dailyBonus&currency=btc&modal=wallet*"
+        
+      ],
+      "js": ["Daily.js"],
+      "run_at": "document_end"
+    }
+    
+    
+  ]
+}
