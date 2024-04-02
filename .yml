@@ -1,0 +1,3 @@
+- name: update-chrome-extension-version-action
+  uses: mmrakt/update-chrome-extension-version-action@v0.1.0
+            
