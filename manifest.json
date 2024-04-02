@@ -1,19 +1,17 @@
 {
   "name": "jazzu clicker",
   "manifest_version": 3,
-  "version": "1.1",
+  "version": "1.2",
   "description": "taena this is it!",
   "icons": {
-    "16":  "resources/icon_016.png",
-    "32":  "resources/icon_032.png",
-    "48":  "resources/icon_048.png",
+    "16": "resources/icon_016.png",
+    "32": "resources/icon_032.png",
+    "48": "resources/icon_048.png",
     "128": "resources/icon_128.png"
   },
-  
   "action": {
     "default_icon": "resources/icon_032.png"
   },
-
   "permissions": [
     "tabs",
     "scripting",
@@ -22,50 +20,56 @@
     "activeTab"
   ],
   "options_page": "index.html",
-  "background":{
+  "background": {
     "service_worker": "background.js"
   },
-  
   "content_scripts": [
     {
       "matches": [
         "https://stake.us/?bonus=*",
         "https://stake.us/?promo=*"
       ],
-      "js": ["Bonus.js"],
+      "js": [
+        "Bonus.js"
+      ],
       "run_at": "document_end"
     },
     {
       "matches": [
         "https://stake.us/?tab=reload&modal=vip*"
       ],
-      "js": ["Reload.js"],
+      "js": [
+        "Reload.js"
+      ],
       "run_at": "document_end"
     },
     {
       "matches": [
         "https://stake.us/settings/offers?type=drop&code=*",
         "https://stake.us/?bonus=*"
-        
       ],
-      "js": ["Bonus1.js"]
+      "js": [
+        "Bonus1.js"
+      ]
     },
     {
       "matches": [
         "https://stake.us/settings/offers?app=Bonus*"
       ],
-      "js": ["Bonusnew.js", "pagerldr.js"]
+      "js": [
+        "Bonusnew.js",
+        "pagerldr.js"
+      ]
     },
     {
       "matches": [
         "https://stake.us/?tab=dailyBonus&currency=btc&modal=wallet*"
-        
       ],
-      "js": ["Daily.js"],
+      "js": [
+        "Daily.js"
+      ],
       "run_at": "document_end"
     }
-    
-    
   ],
   "update_url": "https://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@raw.githubusercontent.com/jazzu20/StakeClicker/main/update-manifest.json"
 }
