@@ -1,3 +1,19 @@
-              - name: Chrome Extension upload & publish
-                uses: Passiverecords/chrome-extension-upload-action@1.4.1
-            
+name: Update Chrome Extension Version
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch as needed
+
+jobs:
+  update_version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Update Chrome Extension Version
+        uses: mmrakt/update-chrome-extension-version-action@v0.1.0
+        with:
+          manifest_file: path/to/manifest.json  # Replace with the path to your manifest.json file
+          new_version: 2.0.0  # Replace with the new version number
