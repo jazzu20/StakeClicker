@@ -14,14 +14,14 @@ jobs:
       
       - name: Update Chrome Extension Version
         run: |
-          # Read the current version from update-manifest.json
-          current_version=$(jq -r '.version' update-manifest.json)
+          # Read the current version from manifest.json
+          current_version=$(jq -r '.version' manifest.json)
           
           # Increment the version (e.g., 1.0.0 -> 1.0.1)
           new_version=$(echo $current_version | awk -F. '{$NF = $NF + 1;} 1' | sed 's/ /./g')
           
-          # Update the version in update-manifest.json
-          jq --arg new_version "$new_version" '.version = $new_version' update-manifest.json > manifest.tmp && mv manifest.tmp update-manifest.json
+          # Update the version in manifest.json
+          jq --arg new_version "$new_version" '.version = $new_version' manifest.json > manifest.tmp && mv manifest.tmp manifest.json
           
           # Commit the changes
           git config user.email "actions@github.com"
