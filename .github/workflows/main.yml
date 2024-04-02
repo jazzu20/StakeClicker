@@ -26,6 +26,6 @@ jobs:
           # Commit the changes
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add update-manifest.json
+          git add manifest.json
           git commit -m "Auto-update extension version to $new_version"
           git push
