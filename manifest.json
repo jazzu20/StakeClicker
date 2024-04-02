@@ -1,7 +1,7 @@
 {
   "name": "jazzu clicker",
   "manifest_version": 3,
-  "version": "1.2",
+  "version": "1.3",
   "description": "taena this is it!",
   "icons": {
     "16": "resources/icon_016.png",
